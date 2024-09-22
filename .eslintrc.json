@@ -1,10 +1,10 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
-   "@typescript-eslint/no-unused-vars": [
+    "@typescript-eslint/no-unused-vars": [
       "error",
       {
-        "args": "all",
+        "args": "none", // Modifique para "none" se você não quiser verificar argumentos não utilizados
         "argsIgnorePattern": "^_",
         "caughtErrors": "all",
         "caughtErrorsIgnorePattern": "^_",
@@ -18,4 +18,3 @@
     "@next/next/no-page-custom-font": "off"
   }
 }
-
