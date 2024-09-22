@@ -15,7 +15,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
 
     return NextResponse.json({ message: 'Tarefa excluída com sucesso', deletedTask });
   } catch (error) {
-    return NextResponse.json({ message: 'Erro ao excluir a tarefa', error: error.message }, { status: 500 });
+    return NextResponse.json({ message: 'Erro ao excluir a tarefa', error: error }, { status: 500 });
   }
 }
 
@@ -41,6 +41,6 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
     });
     return NextResponse.json({ message: 'Tarefa atualizada com sucesso', updatedTask });
   } catch (error) {
-    return NextResponse.json({ message: 'Erro ao atualizar a tarefa', error: error.message }, { status: 500 });
+    return NextResponse.json({ message: 'Erro ao atualizar a tarefa', error: error }, { status: 500 });
   }
 }

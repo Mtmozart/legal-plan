@@ -14,17 +14,17 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ message: 'Tarefa criada com sucesso', newTask });
   } catch (error) {
-    return NextResponse.json({ message: 'Erro ao criar a tarefa', error: error.message }, { status: 500 });
+    return NextResponse.json({ message: 'Erro ao criar a tarefa', error: error }, { status: 500 });
   }
 }
 
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const tasks = await prisma.task.findMany();
     return NextResponse.json(tasks);
   } catch (error) {
-    return NextResponse.json({ message: 'Erro ao buscar as tarefas', error: error.message }, { status: 500 });
+    return NextResponse.json({ message: 'Erro ao buscar as tarefas', error: error }, { status: 500 });
   }
 }
 
