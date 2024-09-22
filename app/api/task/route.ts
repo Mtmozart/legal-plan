@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextRequest, NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 import { ITask } from '@/types/task';
@@ -6,8 +5,7 @@ import { ITask } from '@/types/task';
 const prisma = new PrismaClient();
 
 export async function POST(req: NextRequest) {
-  try {
-   
+  try {   
     const body = await req.json();
     const task = body as ITask; 
 
