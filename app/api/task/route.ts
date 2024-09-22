@@ -6,10 +6,12 @@ const prisma = new PrismaClient();
 
 export async function POST(req: NextRequest) {
   try {
-    const { task }: ITask = await req.json();
-    
+   
+    const body = await req.json();
+    const task = body as ITask; 
+
     const newTask = await prisma.task.create({
-      data: { task }
+      data: task
     });
 
     return NextResponse.json({ message: 'Tarefa criada com sucesso', newTask });
