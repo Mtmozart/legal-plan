@@ -1,0 +1,19 @@
+@import './variables.module.scss';
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: $font-size-medium;
+  background-color: $white;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  
+}

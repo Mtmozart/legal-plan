@@ -1,0 +1,34 @@
+@import '../../styles/variables.module.scss';
+
+.textInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 93%;
+}
+
+.textInput label {
+  margin-bottom: 8px;
+  font-size: $font-size-medium;
+  line-height: 1rem;
+}
+
+.textInput input[type="text"] {
+  padding: 0 16px;
+  width: 100%;
+  height: 56px;
+  gap: 16px;
+  border: 1px solid $medium-gray;
+  border-radius: 8px;
+  font-size: $font-size-medium;
+  outline: none;
+  transition: border-color 0.3s ease; 
+}
+
+.textInput input[type="text"]:focus {
+  border-color: $primary-color;
+}
+
+

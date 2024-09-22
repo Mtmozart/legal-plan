@@ -1,0 +1,30 @@
+@import '../../styles/variables.module.scss';
+
+.button {
+  width: 450px;
+  height: 51px;
+  padding: 16px 24px 16px 24px;
+  gap: 8px;
+  border-radius: 8px;
+  color: $white;
+  font-size: $font-size-medium;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+@media (max-width: $mobile){
+  .button{
+    width: 428px;
+  }
+}
+
+
+@media (max-width: $mobile-small){
+  .button{
+    width: 300px;
+  }
+}

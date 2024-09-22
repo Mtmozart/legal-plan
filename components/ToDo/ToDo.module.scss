@@ -1,0 +1,55 @@
+@import '../../styles/variables.module.scss';
+.toDo__container_all{
+  height: auto;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.toDo__container {
+  width: 450px;
+  min-height: 446px;
+  height: auto;
+  border: 1px solid $tertiary-color;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+ 
+  p {
+
+    color: lighten($color: $black, $amount: 50);
+    size: $font-size-medium;
+  }
+}
+
+.title__top {
+  margin-top: 40px;
+}
+.toDo_cards {
+  width: 386px;
+  height: auto;
+  
+}
+@media (max-width: $mobile){
+  .toDo__container_all{
+    width: 428px;
+  }
+  .toDo__container {
+    width: 428px;
+  }
+  .toDo_cards {
+    min-width: 208px;
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: $mobile-small){
+  .toDo__container {
+    width: 300px;
+  }
+}

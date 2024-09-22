@@ -1,0 +1,103 @@
+@import '../../styles/variables.module.scss';
+
+.card__container {
+  width: 386px;
+  height: auto;
+  min-height: 56px;
+  border-radius: 8px;
+  border: 1px dashed $medium-gray;
+  font-size: $font-size-medium;
+  display: flex; 
+  gap: 16px;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: $medium-gray;
+    cursor: pointer;
+
+    .trashIcon {
+      color: $white;
+    }
+  }
+}
+
+.card__content {
+  width: 100%;
+  min-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    
+}
+
+.card__text__input {
+  display: flex;
+  width: 96%;
+  justify-content: flex-start; 
+  align-items: center;    
+}
+
+.card__text {
+  padding-left: 8px;
+  height: auto;
+  width: auto;
+}
+
+.trashIcon {
+  color: $medium-gray;
+  font-size: $font-size-large;
+}
+
+.card__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  display: none; 
+}
+
+.customCheckbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid $medium-gray;
+  background-color: #fff; 
+  position: relative;
+  cursor: pointer;
+
+  
+  .checkbox:checked + .customCheckbox {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+
+ 
+  .checkmark {
+    font-size: 16px; 
+    color: $primary-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.checkedText{
+  color: lighten($color: $black, $amount: 50);
+  text-decoration: line-through;
+}
+@media (max-width: $mobile) {
+  .card__container {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-small) {
+  .card__container {
+    width: 95%;
+  }
+}

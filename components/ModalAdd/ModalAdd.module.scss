@@ -1,0 +1,41 @@
+@import '../../styles/variables.module.scss';
+
+.input__tarefa {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row; 
+  color: #000;
+}
+.button__cancel {
+  background-color: $quaternary-color;
+  color: $black;
+  width: 185px;
+  height: 51px;
+  border-radius: 8px;
+  padding: 16px 24px 16px 24px;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button__create {
+  color: $white;
+  background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+  width: 185px;
+  height: 51px;
+  border-radius: 8px;
+  padding: 16px 24px 16px 24px;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  cursor: pointer;
+}
+
