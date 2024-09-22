@@ -4,7 +4,7 @@
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
-        "args": "none", // Modifique para "none" se você não quiser verificar argumentos não utilizados
+        "args": "none", 
         "argsIgnorePattern": "^_",
         "caughtErrors": "all",
         "caughtErrorsIgnorePattern": "^_",

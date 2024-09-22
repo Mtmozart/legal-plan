@@ -1,17 +1,19 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export async function DELETE({ params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest) {
   try {
-    const id = parseInt(params.id, 10);
-    if (isNaN(id)) {
+    const url = new URL(request.url);
+    const id = url.pathname.split('/').pop(); 
+    
+    if (!id || isNaN(Number(id))) {
       return NextResponse.json({ message: 'ID inválido' }, { status: 400 });
     }
 
     const deletedTask = await prisma.task.delete({
-      where: { id },
+      where: { id: parseInt(id, 10) },
     });
 
     return NextResponse.json({ message: 'Tarefa excluída com sucesso', deletedTask });
